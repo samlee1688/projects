@@ -1,5 +1,10 @@
 .App {
   background-color: beige;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.title {
+  margin-left: 20px;
 }
 
 .row-template {
@@ -9,19 +14,16 @@
   flex-direction: row;
   padding: 20px;
   background-color:lightslategray;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 20px;
 }
 
 .project-name {
   max-width: 20%;
-  text-align: center;
   margin: 20px;
 }
 
 .project-user {
   max-width: 30%;
-  text-align: center;
   margin: 20px;
 }
 
@@ -33,4 +35,5 @@
 
 .project-set-ind {
   padding: 10px;
+  max-width: 25%;
 }

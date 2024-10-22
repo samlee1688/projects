@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import Button from '@mui/material/Button';
 
 const HwSet = ({set}) => {
     const [checkedOutQty, setCheckedOutQty] = useState(0);
@@ -13,7 +14,6 @@ const HwSet = ({set}) => {
             setCheckedOutQty(0);
         } else{
             console.log("successfully checked in" + valToUpdate);
-            const newQty = checkedOutQty-valToUpdate;
             setCheckedOutQty(checkedOutQty-valToUpdate);
         }
     }
@@ -23,8 +23,6 @@ const HwSet = ({set}) => {
             console.log("invalid qty")
         } else{
             console.log("successfully checked out" + valToUpdate);
-            const newQty = checkedOutQty+valToUpdate;
-            console.log(newQty);
             setCheckedOutQty(checkedOutQty+valToUpdate);
         }
     }
@@ -40,8 +38,8 @@ const HwSet = ({set}) => {
                 required
                 className="project-set-ind"
             />
-                <button className="project-set-ind" onClick={handleCheckIn}>Check In</button>
-                <button className="project-set-ind" onClick={handleCheckOut}>Check Out</button>
+                <Button className="project-set-ind" style={{marginLeft:10}} variant="contained" size="small" onClick={handleCheckIn}>Check In</Button>
+                <Button className="project-set-ind" style={{marginLeft:10}} variant="contained" size="small" onClick={handleCheckOut}>Check Out</Button>
         </form>
     );
 }
