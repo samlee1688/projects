@@ -5,8 +5,8 @@ const HwSet = ({set}) => {
     const [checkedOutQty, setCheckedOutQty] = useState(0);
     const [valToUpdate, setValToUpdate] = useState(0);
 
-    const handleCheckIn = (e) => {
-        e.preventDefault();
+    const handleCheckIn = (props) => {
+        props.preventDefault();
         if(valToUpdate <= 0){
             console.log("invalid qty")
         } else if(valToUpdate > checkedOutQty){
@@ -17,8 +17,8 @@ const HwSet = ({set}) => {
             setCheckedOutQty(checkedOutQty-valToUpdate);
         }
     }
-    const handleCheckOut = (e) => {
-        e.preventDefault();
+    const handleCheckOut = (props) => {
+        props.preventDefault();
         if(valToUpdate <= 0){
             console.log("invalid qty")
         } else{
